@@ -1,0 +1,19 @@
+{
+  "name": "devstack",
+  "version": "0.1.0",
+  "description": "",
+  "main": "lib/index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/tilleps/devstack.git"
+  },
+  "author": "Eugene Song <tilleps@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/tilleps/devstack/issues"
+  },
+  "homepage": "https://github.com/tilleps/devstack#readme"
+}
