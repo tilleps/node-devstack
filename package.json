@@ -15,5 +15,13 @@
   "bugs": {
     "url": "https://github.com/tilleps/devstack/issues"
   },
-  "homepage": "https://github.com/tilleps/devstack#readme"
+  "homepage": "https://github.com/tilleps/devstack#readme",
+  "dependencies": {
+    "connect-mongo": "1.1.0",
+    "consolidate": "0.14.0",
+    "lodash": "4.7.0",
+    "marked": "0.3.5",
+    "mongoose": "4.4.11",
+    "mysql": "2.10.2"
+  }
 }
