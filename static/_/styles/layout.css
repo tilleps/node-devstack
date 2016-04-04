@@ -1,0 +1,70 @@
+/**
+<!-- Minimal Markup -->
+<div class="layout-wrapper">
+  <div class="layout-header">Header</div>
+  <div class="layout-body">
+    <div class="layout-content">
+      Content
+      <div data-lorem="4p"></div>
+      <div data-lorem="4p"></div>
+
+    </div>
+    <div class="layout-lside">lside</div>
+    <div class="layout-rside">rside</div>
+  </div>
+  <div class="layout-footer">Footer</div>
+</div>
+*/
+
+
+/**
+* 1. Avoid the IE 10-11 `min-height` bug.
+* 2. Set `flex-shrink` to `0` to prevent some browsers from
+*    letting these items shrink to smaller than their content's default
+*    minimum size. See http://bit.ly/1Mn35US for details.
+* 3. Use `%` instead of `vh` since `vh` is buggy in older mobile Safari.
+*/
+
+.layout-wrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+}
+
+.layout-header,
+.layout-footer {
+  flex: none;
+  overflow: hidden;
+}
+
+.layout-body {
+  display: flex;
+  flex: 1 0 auto;
+  flex-direction: row;;
+}
+
+.layout-content {
+  flex: 1;
+}
+
+.layout-lside {
+  order: -1;
+  overflow: hidden;
+}
+.layout-rside {}
+
+/*
+@media (--break-lg) {
+  .layout-body {
+    flex-direction: row;
+  }
+  .layout-content {
+    flex: 1;
+    padding: 0 var(--space-lg);
+    margin: 0;
+  }
+  .layout-lside, .layout-rside {
+    flex: 0 0 12em;
+  }
+}
+*/

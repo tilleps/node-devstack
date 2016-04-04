@@ -1,0 +1,110 @@
+<html>
+<head>
+	<title>Layout</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+  
+  <link rel="stylesheet" href="_/styles/reset.css" type="text/css" media="print, screen" />
+	<link rel="stylesheet" href="_/styles/visor.css" type="text/css" media="print, screen" />
+	<link rel="stylesheet" href="_/styles/layout.css" type="text/css" media="print, screen" />
+	<link rel="stylesheet" href="_/styles/misc.css" type="text/css" media="print, screen" />
+  
+  <style>
+  /*** Customize Visors ***/  
+  .visor-header { height: 80px; background: #ccc; }
+  .visor-footer { height: 40px; background: #ccc; }
+  .visor-content { background: #ddd; }
+  .visor-left { width: 200px; background: #bbb; }  
+  .visor-right { width: 300px; background: #bbb; }
+  </style>
+  
+  <style>
+  /*** Customize Layout ***/  
+  .layout-header { height: 80px; background: #eee; }
+  .layout-footer { height: 30px; background: #999; }
+  .layout-lside { width: 100px; background: #ccc; }
+  .layout-rside { width: 100px; background: #ccc; }
+  </style>
+  
+  
+  <style>
+  /*** Page specific styling ***/
+  button { padding: 4px; cursor: pointer; }
+  </style>
+  
+  
+  <script src="_/vendor/jquery/dist/jquery-2.2.0.min.js"></script>  
+  <script src="_/scripts/lorem.js"></script>
+  <script src="_/scripts/fastclick.min.js"></script>
+  <script src="_/scripts/mobile.js"></script>  
+  <script src="_/scripts/layout.js"></script>
+</head>
+<body>
+
+  <div class="visor-wrapper">
+    
+    <div class="visor-header vertical">
+      TopVisor
+      
+      <div data-lorem="4p"></div>
+    </div>
+    
+    
+    <div class="visor-body">
+      
+      <div class="visor-left horizontal">
+        LeftVisor
+        
+        <div data-lorem="4p"></div>
+      </div>
+    
+      <div class="visor-content">
+        
+        <!-- START: Layout -->
+        <!-- -->
+        <div class="layout-wrapper">
+          <div class="layout-header vertical">Header</div>
+          <div class="layout-body">
+            <div class="layout-content">
+              Content
+              
+              <div>
+                <button data-control=".visor-header">Visor (Top)</button>
+                <button data-control=".visor-left">Visor (Left)</button>
+                <button data-control=".visor-right">Visor (Right)</button>
+                <button data-control=".visor-footer">Visor (Bot)</button>
+              </div>
+              <div>
+                <button data-control=".layout-header">Layout (Top)</button>
+                <button data-control=".layout-lside">Layout (Left)</button>
+                <button data-control=".layout-rside">Layout (Right)</button>
+                <button data-control=".layout-footer">Layout (Bot)</button>
+              </div>
+              
+              <div data-lorem="1p"></div>
+              <div data-lorem="1p"></div>
+      
+            </div>
+            <div class="layout-lside horizontal">lside</div>
+            <div class="layout-rside horizontal">rside</div>
+          </div>
+          <div class="layout-footer vertical">Footer</div>
+        </div>
+        <!-- END: Layout -->
+    
+      </div>
+    
+      <div class="visor-right horizontal">
+        RightVisor
+      </div>
+    
+    </div>
+    
+    
+    <div class="visor-footer vertical">
+      BotVisor
+    </div>
+
+  </div>
+    
+</body>
+</html>

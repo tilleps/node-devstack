@@ -1,0 +1,70 @@
+/**
+  <!-- Minimal Markup -->
+
+  <div class="visor-wrapper">
+    
+    <div class="visor-header">TopVisor</div>    
+  
+    <div class="visor-body">      
+      <div class="visor-lside">LeftVisor</div>    
+      <div class="visor-content">Content</div>    
+      <div class="visor-rside">RightVisor</div>    
+    </div>
+        
+    <div class="visor-footer">BotVisor</div>
+
+  </div>
+*/
+
+
+/*
+Following CSS should be included somewhere
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  transition: all 70ms ease-out;
+}
+
+body {
+  height: 100vh;
+  width: 100%;
+}
+*/
+
+.visor-wrapper {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.visor-header,
+.visor-footer {
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.visor-body {
+  flex: 1;
+  display: flex;
+  flex-direction: row;
+  overflow: scroll;
+  -webkit-overflow-scrolling: touch;
+}
+
+.visor-content {
+  flex: 1;
+  display: flex;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.visor-left {
+  order: -1;
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}
+.visor-right {    
+  overflow: auto;
+  -webkit-overflow-scrolling: touch;
+}

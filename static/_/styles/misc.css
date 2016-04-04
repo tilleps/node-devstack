@@ -1,0 +1,21 @@
+* {
+  transition: all 70ms ease-out;  
+}
+
+/*
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+*/
+
+
+
+/*** iOS elastic scroll disable ***/
+body { position: fixed; }
+
+.vertical.collapsed {
+  height: 0;
+}
+.horizontal.collapsed {
+  width: 0;
+}
