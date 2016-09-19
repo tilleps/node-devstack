@@ -1,5 +1,6 @@
 * {
-  transition: all 70ms ease-out;  
+  transition: all 70ms ease-out;
+	z-index: 0;
 }
 
 /*
@@ -18,4 +19,8 @@ body { position: fixed; }
 }
 .horizontal.collapsed {
   width: 0;
+}
+.layout-overlay.collapsed {
+	opacity: 0;
+	z-index: -1;
 }

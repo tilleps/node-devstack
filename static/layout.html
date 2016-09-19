@@ -29,6 +29,9 @@
   <style>
   /*** Page specific styling ***/
   button { padding: 4px; cursor: pointer; }
+  .layout-visor-overlay {	padding: 50px; background-color: rgba(255, 255, 255, 0.9); }
+  .layout-body-overlay {	padding: 50px; background-color: rgba(255, 255, 255, 0.9); }
+  .layout-content-overlay {	padding: 50px; background-color: rgba(255, 255, 255, 0.9); }
   </style>
   
   
@@ -40,7 +43,14 @@
 </head>
 <body>
 
-  <div class="visor-wrapper">
+  <div class="visor-wrapper overlay-container">
+
+    <div class="layout-visor-overlay layout-overlay collapsed" data-control=".layout-visor-overlay">
+      <h1>Layout Visor Overlay</h1>                
+      <div data-lorem="1p"></div>
+      <div data-lorem="4p"></div>                              
+    </div>
+    
     
     <div class="visor-header vertical">
       TopVisor
@@ -57,14 +67,30 @@
         <div data-lorem="4p"></div>
       </div>
     
-      <div class="visor-content">
-        
+      <div class="visor-content overlay-container">
+          
+          <div class="layout-body-overlay layout-overlay collapsed" data-control=".layout-body-overlay">
+            <h1>Layout Body Overlay</h1>                
+            <div data-lorem="4p"></div>
+            <div data-lorem="4p"></div>                              
+          </div>
+          
+          
         <!-- START: Layout -->
         <!-- -->
         <div class="layout-wrapper">
+
+          
           <div class="layout-header vertical">Header</div>
           <div class="layout-body">
-            <div class="layout-content">
+            <div class="layout-content overlay-container">
+              
+              <div class="layout-content-overlay layout-overlay collapsed" data-control=".layout-content-overlay">
+                <h1>Layout Content Overlay</h1>                
+                <div data-lorem="1p"></div>
+                <div data-lorem="4p"></div>                              
+              </div>
+              
               Content
               
               <div>
@@ -78,6 +104,11 @@
                 <button data-control=".layout-lside">Layout (Left)</button>
                 <button data-control=".layout-rside">Layout (Right)</button>
                 <button data-control=".layout-footer">Layout (Bot)</button>
+              </div>
+              <div>
+                <button data-control=".layout-visor-overlay">Layout Visor Overlay</button>                
+                <button data-control=".layout-body-overlay">Layout Body Overlay</button>
+                <button data-control=".layout-content-overlay">Layout Content Overlay</button>
               </div>
               
               <div data-lorem="1p"></div>

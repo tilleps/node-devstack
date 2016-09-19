@@ -43,8 +43,25 @@
   flex-direction: row;;
 }
 
+.layout-overlay {
+	z-index: 1;
+}
+
 .layout-content {
   flex: 1;
+}
+
+.overlay-container {
+	position: relative;
+}
+
+.layout-overlay {
+  position: absolute;
+  /*background-color: rgba(255, 255, 255, 0.9);*/
+  width: 100%;
+  height: 100%;
+	overflow: auto;
+  box-sizing: border-box;
 }
 
 .layout-lside {
@@ -54,6 +71,9 @@
 .layout-rside {
 	overflow: hidden;
 }
+
+
+
 
 /*
 @media (--break-lg) {
