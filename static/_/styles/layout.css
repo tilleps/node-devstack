@@ -51,7 +51,9 @@
   order: -1;
   overflow: hidden;
 }
-.layout-rside {}
+.layout-rside {
+	overflow: hidden;
+}
 
 /*
 @media (--break-lg) {
