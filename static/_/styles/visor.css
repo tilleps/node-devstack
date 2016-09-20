@@ -52,7 +52,7 @@ body {
   -webkit-overflow-scrolling: touch;
 }
 
-.visor-content {
+.visor-content-wrapper {
   flex: 1;
   display: flex;
   overflow: auto;

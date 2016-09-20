@@ -42,7 +42,7 @@
   <script src="_/scripts/layout.js"></script>
 </head>
 <body>
-
+  
   <div class="visor-wrapper overlay-container">
 
     <div class="layout-visor-overlay layout-overlay collapsed" data-control=".layout-visor-overlay">
@@ -53,37 +53,38 @@
     
     
     <div class="visor-header vertical">
-      TopVisor
+      <div class="inner-wrapper">      
+        TopVisor
       
-      <div data-lorem="4p"></div>
+        <div data-lorem="4p"></div>
+      </div>
     </div>
     
     
     <div class="visor-body">
       
       <div class="visor-left horizontal">
-        LeftVisor
+        <div class="inner-wrapper">
+          LeftVisor
         
-        <div data-lorem="4p"></div>
+          <div data-lorem="4p"></div>          
+        </div>
       </div>
-    
-      <div class="visor-content overlay-container">
-          
-          <div class="layout-body-overlay layout-overlay collapsed" data-control=".layout-body-overlay">
-            <h1>Layout Body Overlay</h1>                
-            <div data-lorem="4p"></div>
-            <div data-lorem="4p"></div>                              
-          </div>
-          
-          
-        <!-- START: Layout -->
-        <!-- -->
+      
+      <div class="visor-content-wrapper overlay-container">
+        
+        <div class="layout-body-overlay layout-overlay collapsed" data-control=".layout-body-overlay">
+          <h1>Layout Body Overlay</h1>                
+          <div data-lorem="4p"></div>
+          <div data-lorem="4p"></div>                              
+        </div>
+        
         <div class="layout-wrapper">
 
           
           <div class="layout-header vertical">Header</div>
           <div class="layout-body">
-            <div class="layout-content overlay-container">
+            <div class="layout-content-wrapper overlay-container">
               
               <div class="layout-content-overlay layout-overlay collapsed" data-control=".layout-content-overlay">
                 <h1>Layout Content Overlay</h1>                
@@ -91,38 +92,42 @@
                 <div data-lorem="4p"></div>                              
               </div>
               
-              Content
+              <div class="layout-content">
+                <div class="inner-wrapper">                
+                  Content
               
-              <div>
-                <button data-control=".visor-header">Visor (Top)</button>
-                <button data-control=".visor-left">Visor (Left)</button>
-                <button data-control=".visor-right">Visor (Right)</button>
-                <button data-control=".visor-footer">Visor (Bot)</button>
-              </div>
-              <div>
-                <button data-control=".layout-header">Layout (Top)</button>
-                <button data-control=".layout-lside">Layout (Left)</button>
-                <button data-control=".layout-rside">Layout (Right)</button>
-                <button data-control=".layout-footer">Layout (Bot)</button>
-              </div>
-              <div>
-                <button data-control=".layout-visor-overlay">Layout Visor Overlay</button>                
-                <button data-control=".layout-body-overlay">Layout Body Overlay</button>
-                <button data-control=".layout-content-overlay">Layout Content Overlay</button>
+                  <div>
+                    <button data-control=".visor-header">Visor (Top)</button>
+                    <button data-control=".visor-left">Visor (Left)</button>
+                    <button data-control=".visor-right">Visor (Right)</button>
+                    <button data-control=".visor-footer">Visor (Bot)</button>
+                  </div>
+                  <div>
+                    <button data-control=".layout-header">Layout (Top)</button>
+                    <button data-control=".layout-lside">Layout (Left)</button>
+                    <button data-control=".layout-rside">Layout (Right)</button>
+                    <button data-control=".layout-footer">Layout (Bot)</button>
+                  </div>
+                  <div>
+                    <button data-control=".layout-visor-overlay">Layout Visor Overlay</button>                
+                    <button data-control=".layout-body-overlay">Layout Body Overlay</button>
+                    <button data-control=".layout-content-overlay">Layout Content Overlay</button>
+                  </div>
+                  
+                  <div data-lorem="3p"></div>
+                  <div data-lorem="5p"></div>
+                </div>
               </div>
               
-              <div data-lorem="1p"></div>
-              <div data-lorem="1p"></div>
-      
             </div>
             <div class="layout-lside horizontal">lside</div>
             <div class="layout-rside horizontal">rside</div>
           </div>
           <div class="layout-footer vertical">Footer</div>
         </div>
-        <!-- END: Layout -->
-    
+        
       </div>
+      
     
       <div class="visor-right horizontal">
         RightVisor

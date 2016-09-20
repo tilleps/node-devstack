@@ -3,7 +3,7 @@
 <div class="layout-wrapper">
   <div class="layout-header">Header</div>
   <div class="layout-body">
-    <div class="layout-content">
+    <div class="layout-content-wrapper">
       Content
       <div data-lorem="4p"></div>
       <div data-lorem="4p"></div>
@@ -47,7 +47,7 @@
 	z-index: 1;
 }
 
-.layout-content {
+.layout-content-wrapper {
   flex: 1;
 }
 
@@ -80,7 +80,7 @@
   .layout-body {
     flex-direction: row;
   }
-  .layout-content {
+  .layout-content-wrapper {
     flex: 1;
     padding: 0 var(--space-lg);
     margin: 0;
