@@ -1,6 +1,7 @@
 * {
-	font-family: Gotham, "Helvetica Neue";
-	font-weight: 200;
+	font-family: "Helvetica Neue", Gotham, Arial;
+	font-weight: 300;
+  transition: all 70ms ease-out;
 }
 
 .hidden { display: none; }
@@ -11,6 +12,33 @@
   -khtml-user-select: none;    /* Konqueror */
   -moz-user-select: none;      /* Firefox */
   -ms-user-select: none;       /* IE/Edge */
-  user-select: none;           /* non-prefixed version, currently
-                                  not supported by any browser */
+  user-select: none;           /* non-prefixed version, currently not supported by any browser */
+}
+
+/*** Customize Visors ***/  
+.visor-header { height: 80px; background: #ccc; }
+.visor-footer { height: 40px; background: #ccc; }
+.visor-content { background: #ddd; }
+.visor-lside { width: 200px; background: #bbb; }  
+.visor-rside { width: 300px; background: #bbb; }
+
+/*** Customize Layout ***/
+.visor-container { padding: 0px; }
+.layout-header { height: 80px; background: #eee; }
+.layout-footer { height: 30px; background: #999; }
+.layout-lside { width: 100px; background: #ccc; }
+.layout-rside { width: 100px; background: #ccc; }
+
+/*** Customize Overlays ***/
+.overlay-wrapper { padding: 50px; background-color: rgba(255, 255, 255, 0.9); }
+
+/*** Page specific styling ***/
+button { padding: 4px; cursor: pointer; }
+
+
+.vertical.collapsed {
+  height: 0;
+}
+.horizontal.collapsed {
+  width: 0;
 }

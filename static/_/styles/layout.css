@@ -1,18 +1,25 @@
 /**
 <!-- Minimal Markup -->
 <div class="layout-wrapper">
-  <div class="layout-header">Header</div>
+  <div class="layout-header">
+		<div class="layout-header-wrapper">Header</div>
+	</div>
   <div class="layout-body">
     <div class="layout-content-wrapper">
       Content
       <div data-lorem="4p"></div>
       <div data-lorem="4p"></div>
-
     </div>
-    <div class="layout-lside">lside</div>
-    <div class="layout-rside">rside</div>
+    <div class="layout-lside">
+			<div class="layout-lside-wrapper">lside</div>
+		</div>
+    <div class="layout-rside">
+			<div class="layout-rside-wrapper">rside</div>
+		</div>
   </div>
-  <div class="layout-footer">Footer</div>
+  <div class="layout-footer">
+		<div class="layout-footer-wrapper">Footer</div>
+	</div>
 </div>
 */
 
@@ -39,29 +46,15 @@
 
 .layout-body {
   display: flex;
-  flex: 1 0 auto;
   flex-direction: row;;
 }
 
-.layout-overlay {
-	z-index: 1;
+.layout-body-wrapper {
+	flex: 1;
 }
 
 .layout-content-wrapper {
   flex: 1;
-}
-
-.overlay-container {
-	position: relative;
-}
-
-.layout-overlay {
-  position: absolute;
-  /*background-color: rgba(255, 255, 255, 0.9);*/
-  width: 100%;
-  height: 100%;
-	overflow: auto;
-  box-sizing: border-box;
 }
 
 .layout-lside {
