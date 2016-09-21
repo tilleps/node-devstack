@@ -42,3 +42,15 @@ button { padding: 4px; cursor: pointer; }
 .horizontal.collapsed {
   width: 0;
 }
+
+
+
+.fade-transition {
+  transition: all 150ms ease;
+}
+.fade-enter {
+  opacity: 0;
+}
+.fade-leave {
+  opacity: 0;
+}

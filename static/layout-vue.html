@@ -1,0 +1,265 @@
+<html>
+<head>
+	<title>Layout</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui">
+  
+  <link rel="stylesheet" href="_/styles/reset.css" type="text/css" media="print, screen" />
+	<link rel="stylesheet" href="_/styles/visor.css" type="text/css" media="print, screen" />
+	<link rel="stylesheet" href="_/styles/layout.css" type="text/css" media="print, screen" />
+	<link rel="stylesheet" href="_/styles/overlay.css" type="text/css" media="print, screen" />  
+	<link rel="stylesheet" href="_/styles/main.css" type="text/css" media="print, screen" />  
+	<link rel="stylesheet" href="_/styles/mobile.css" type="text/css" media="print, screen" />
+
+  
+  <script src="_/vendor/jquery/dist/jquery-2.2.0.min.js"></script>
+  <script src="_/scripts/vue.min.js"></script>  
+  <script src="_/scripts/lorem.js"></script>
+  <script src="_/scripts/fastclick.min.js"></script>
+  <script src="_/scripts/mobile.js"></script>  
+  <script src="_/scripts/layout.js"></script>
+  
+
+  <script type="text/template" id="template-layout">
+    <div class="visor-container">
+  
+      <div class="visor-wrapper overlay-container">
+
+        <div class="visor-overlay overlay collapsed" v-bind:class="{ collapsed: collapsed.visorOverlay }" v-on:click="collapsed.visorOverlay = !collapsed.visorOverlay">
+          <div class="visor-overlay-wrapper overlay-wrapper">
+            <slot name="visor-overlay">
+              <h1>visor-overlay</h1>
+              <div data-lorem="1p"></div>
+              <div data-lorem="4p"></div>
+            </slot>
+          </div>
+        </div>
+    
+    
+        <div class="visor-header vertical" v-bind:class="{ collapsed: !collapsed.visorHeader }">
+          <div class="visor-header-wrapper">      
+            <slot name="visor-header">
+              <h3>visor-header</h3>
+            </slot>
+          </div>
+        </div>
+    
+    
+        <div class="visor-body">
+      
+      
+          <div class="visor-lside horizontal" v-bind:class="{ collapsed: !collapsed.visorLside }">
+            <div class="visor-lside-wrapper">
+              <slot name="visor-lside">
+                <h3>visor-lside</h3>
+                <div data-lorem="4p"></div>
+              </slot>
+            </div>
+          </div>
+      
+      
+          <div class="visor-rside horizontal" v-bind:class="{ collapsed: !collapsed.visorRside }">
+            <div class="visor-rside-wrapper">
+              <slot name="visor-rside">
+                <h3>visor-rside</h3>
+                <div data-lorem="4p"></div>
+              </slot>
+            </div>
+          </div>
+      
+      
+          <div class="visor-content layout">
+
+        
+            <div class="visor-content-wrapper layout-wrapper overlay-container">
+              
+                            
+              <div class="layout-overlay overlay collapsed" v-bind:class="{ collapsed: collapsed.layoutOverlay }" v-on:click="collapsed.layoutOverlay = !collapsed.layoutOverlay">
+                <div class="layout-overlay-wrapper overlay-wrapper">
+                  <slot name="layout-overlay">
+                    <h1>layout-overlay</h1>                
+                    <div data-lorem="4p"></div>
+                    <div data-lorem="4p"></div>                    
+                  </slot>
+                </div>
+              </div>
+              
+          
+              <div class="layout-header vertical">
+                <div class="layout-header-wrapper">
+                  <slot name="layout-header">
+                    <h3>layout-header</h3>
+                  </slot>
+                </div>
+              </div>
+          
+          
+              <div class="layout-body">
+                <div class="layout-body-wrapper overlay-container">
+              
+                  <div v-if="!collapsed.contentOverlay" class="content-overlay overlay" transition="fade" v-on:click="collapsed.contentOverlay = !collapsed.contentOverlay">
+                    <div class="content-overlay-wrapper overlay-wrapper">
+                      <slot name="content-overlay">
+                        <h1>content-overlay</h1>
+                        <div data-lorem="1p"></div>
+                        <div data-lorem="4p"></div>                        
+                      </slot>
+                    </div>
+                  </div>
+              
+              
+                  <div class="layout-content">
+                    <div class="layout-content-wrapper">                
+                      
+                      <div>
+                        <h3>Content</h3>
+                                              
+                        <div>
+                          <button v-on:click="collapsed.visorHeader = !collapsed.visorHeader">Visor (Top)</button>
+                          <button v-on:click="collapsed.visorLside = !collapsed.visorLside">Visor (Left)</button>
+                          <button v-on:click="collapsed.visorRside = !collapsed.visorRside">Visor (Right)</button>
+                          <button v-on:click="collapsed.visorFooter = !collapsed.visorFooter">Visor (Bottom)</button>
+                        </div>
+                        <div>
+                          <button v-on:click="collapsed.layoutHeader = !collapsed.layoutHeader">Layout (Top)</button>
+                          <button v-on:click="collapsed.layoutLside = !collapsed.layoutLside">Layout (Left)</button>
+                          <button v-on:click="collapsed.layoutRside = !collapsed.layoutRside">Layout (Right)</button>
+                          <button v-on:click="collapsed.layoutFooter = !collapsed.layoutFooter">Layout (Bottom)</button>
+                        </div>
+                        <div>
+                          <button v-on:click="collapsed.visorOverlay = !collapsed.visorOverlay">Visor Overlay</button>                
+                          <button v-on:click="collapsed.layoutOverlay = !collapsed.layoutOverlay">Layout Overlay</button>
+                          <button v-on:click="collapsed.contentOverlay = !collapsed.contentOverlay">Content Overlay</button>
+                        </div>
+                      </div>
+                      
+                      <!--
+                      <slot>                  
+                        <div data-lorem="1p"></div>                  
+                      </slot>
+                      -->
+                        
+                    </div>
+                  </div>
+                </div>
+            
+            
+                <div class="layout-lside horizontal" v-bind:class="{ collapsed: !collapsed.layoutLside }">
+                  <div class="layout-lside-wrapper">
+                    <slot name="layout-lside">
+                      <h3>layout-lside</h3>
+                    </slot>
+                  </div>
+                </div>
+            
+            
+                <div class="layout-rside horizontal" v-bind:class="{ collapsed: !collapsed.layoutRside }">
+                  <div class="layout-rside-wrapper">
+                    <slot name="layout-rside">
+                      <h3>layout-rside</h3>
+                    </slot>
+                  </div>
+                </div>
+            
+              </div>
+          
+          
+              <div class="layout-footer vertical" v-bind:class="{ collapsed: !collapsed.layoutFooter }">
+                <div class="layout-footer-wrapper">
+                  <slot name="layout-footer">
+                    <h3>layout-footer</h3>
+                  </slot>
+                </div>
+              </div>
+              
+              
+            </div>
+        
+          </div>
+      
+
+    
+        </div>
+    
+    
+        <div class="visor-footer vertical" v-bind:class="{ collapsed: !collapsed.visorFooter }">
+          <div class="visor-footer-wrapper">
+            <slot name="visor-footer">
+              <h3>visor-footer</h3>
+            </slot>
+          </div>
+        </div>
+
+      </div>
+    
+    </div>
+  </script>
+
+  
+  <script type="text/template" id="template-main">
+    
+    <app-layout>
+      <div slot="visor-overlay">
+        <h1>Visor Overlay</h1>
+        <div data-lorem="1p"></div>
+        <div data-lorem="4p"></div>        
+      </div>
+      <div slot="visor-header">
+        <h2>TopVisor!!</h2>
+        <div data-lorem="4p"></div>      
+      </div>
+      <div slot="layout-header">test</div>
+      <div>
+        Some content
+      </div>
+      <div>
+        Some content!!
+      </div>
+    </app-layout>
+    
+  </script>
+  
+  
+</head>
+<body>
+  
+  <div id="app"></div>
+  
+  
+  <script>
+  
+  var layoutComponent = Vue.extend({
+    template: "#template-layout",
+    data: function () {
+      return {
+        collapsed: {
+          visorHeader: true,
+          visorLside: true,
+          visorRside: true,
+          visorFooter: true,
+          layoutHeader: true,
+          layoutLside: true,
+          layoutRside: true,
+          layoutFooter: true,
+          visorOverlay: true,
+          layoutOverlay: true,
+          contentOverlay: true
+        }
+      }
+    }
+  });
+  
+  
+  new Vue({
+    el: '#app',
+    template: "#template-main",
+    components: {
+      "app-layout": layoutComponent
+    },
+    data: {
+      message: 'Hello Vue.js!'
+    }
+  })
+  </script>
+</body>
+
+</html>

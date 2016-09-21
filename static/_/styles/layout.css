@@ -46,7 +46,8 @@
 
 .layout-body {
   display: flex;
-  flex-direction: row;;
+  flex-direction: row;
+	flex: 1;
 }
 
 .layout-body-wrapper {
